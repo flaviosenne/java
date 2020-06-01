@@ -6,7 +6,13 @@ public class Country {
     private String continent;
     private String initials;
     private ArrayList<State> state;
+    private ArrayList<City> city;
     
+    Country(String continent, String initials, ArrayList<State> state){
+        this.continent = continent;
+        this.initials = initials;
+        this.state = state;
+    }
     Country(){
         this.continent = "indefinido";
         this.initials = "indefinido";
@@ -64,4 +70,14 @@ public class Country {
        }
    }
     
+   
+   public boolean addCityState(City city, State state){
+       int pos = this.getState(state);
+       if(pos != -1){
+           state.addCity(city);
+           return true;
+       }else{
+           return false;
+       }
+   }
 }

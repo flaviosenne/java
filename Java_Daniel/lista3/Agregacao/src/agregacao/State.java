@@ -3,20 +3,20 @@ package agregacao;
 import java.util.ArrayList;
 
 public class State {
-    private Integer name;
+    private String name;
     private String initials;
     private ArrayList<City> city;
     
     public State(){
         this.city = new ArrayList();
     }
-    public State(int name, String initials, ArrayList<City> city) {
+    public State(String name, String initials, ArrayList<City> city) {
         this.name = name;
         this.initials = initials;
         this.city = city;
     }
     
-    public void setName(int name){
+    public void setName(String name){
         this.name = name;
     }
     public void setInitials(String initials){
@@ -27,7 +27,7 @@ public class State {
     }
     
     
-    public int getName(){
+    public String getName(){
         return this.name;
     }
     public String getInitials(){
